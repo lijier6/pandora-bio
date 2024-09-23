@@ -50,7 +50,7 @@ class fxLength:
 			# dict to DataFrame
 			length = pd.DataFrame.from_dict(length)
 
-		if self.avg_only: print(mean(length.length))
+		if self.avg_only: print(f'The mean length is {mean(length.length)}')
 
 		if self.plot:
 
@@ -72,4 +72,5 @@ class fxLength:
 					horizontalalignment='right')
 			# print(xticks)
 			length.hist(column='length', grid=False, bins=10000, ax=ax)
-			plt.savefig(self.seq + '.len.pdf', dpi=600)
+			plt.savefig(f'{self.seq}.len.pdf', dpi=600)
+			logger.info(f'The histogram stored at {self.seq}.len.pdf')

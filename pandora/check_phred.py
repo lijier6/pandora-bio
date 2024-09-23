@@ -1,6 +1,7 @@
 #coding:utf-8
 
 import sys
+from loguru import logger
 
 from . import readseq
 
@@ -33,6 +34,7 @@ class Phred:
 		system.check_file(self.fq)
 
 	def check_phred(self):
+		logger.info(f'Checking Phred value using {self.num} sequences.')
 		universal_quals, universal_mins, c = [], [], 0
 		handle = system.open(self.fq)
 		for name, seq, qual in readseq.readseq(handle):

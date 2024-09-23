@@ -1,6 +1,7 @@
 #coding:utf-8
 
 import sys
+from loguru import logger
 
 from . import readseq
 
@@ -44,10 +45,12 @@ class Extract_Seq:
 		handle = system.open_file(self.seqin)
 		allid = [self.seqid] if self.seqid else pd.read_csv(self.idlist, squeeze=False, header=None, index_col=0, sep='\t').index
 		if not self.fastq:
+			logger.info('Extracting sequences from fasta file.')
 			for name, seq, qual in readseq.readseq(handle):
 				if name in allid:
 					print(f'>{name}\n{seq}\n')
 		else:
+			logger.info('Extracting sequences from fastq file.')
 			for name, seq, qual in readseq.readseq(handle):
 				if name in allid:
 					print(f'@{name}\n{seq}\n+\n{qual}\n')
