@@ -21,10 +21,11 @@ class Phred:
 
 		"""
 		Check phred value of input fastq.
+
 		args:
-			fq: FILE
+			fq: file
 				input fastq file.
-			num : INT
+			num : int 
 				number of sequence for phred check.
 		"""
 

@@ -1,22 +1,25 @@
 #coding:utf-8
 
-import sys
 import os
+import sys
+from loguru import logger
 
 from . import readseq
 
 try:
 	from hellokit import system
 except ModuleNotFoundError:
-    sys.exit(f'<hellokit> required, try <pip install hellokit>.')
+    logger.error(f'<hellokit> required, try <pip3 install hellokit>.')
+	sys.exit()
 
 
 class FQ2FA:
 	def __init__(self, fq: str = None):
 		"""
-		Wrapper transforming fastq to fasta.
+		convert fastq to fasta.
+
 		args:
-			fq: FILE
+			fq: file
 				input fastq file (.gz).
 		"""
 

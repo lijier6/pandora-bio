@@ -1,7 +1,7 @@
 
 ## this is a copy-and-pase from https://github.com/lh3/readfq/blob/master/readfq.py
 def readseq(fp): # this is a generator function
-	print(fp)
+#	print(fp)
 	last = None # this is a buffer keeping the last unprocessed line
 	while True: # mimic closure; is it a bad idea?
 		if not last: # the first record or a record following a fastq

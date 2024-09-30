@@ -8,21 +8,21 @@ from . import readseq
 try:
 	from hellokit import system
 except ModuleNotFoundError:
-    sys.exit(f'<hellokit> required, try <pip install hellokit>.')
+    sys.exit(f'<hellokit> required, try <pip3 install hellokit>.')
 
 
 class fxLength:
 	def __init__(self, seq: str = None, plot: bool = Flase, avg_only: bool=False):
 		"""
-		Calculationg length of each sequence and print them,
-		plot a histgram if plot was set, average length adds on figure.
+		stdout length of each sequence,
+		plot a histgram if plot=True was set.
 
 		args:
-			seq: FILE
+			seq: file
 				input sequence file, fastq or fasta.
-			plot: BOOL
+			plot: bool
 				set to plot histgram of sequences' length.
-			avg_only: BOOL
+			avg_only: bool
 				set to print average length only.
 		"""
 
@@ -57,7 +57,7 @@ class fxLength:
 			try:
 				import matplotlib
 			except ModuleNotFoundError:
-				sys.exit(f'<matplotlib> required, try <pip install matplotlib>.')
+				sys.exit(f'<matplotlib> required, try <pip3 install matplotlib>.')
 
 			matplotlib.use('Agg')
 			import matplotlib.pyplot as plt

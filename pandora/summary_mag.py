@@ -18,11 +18,11 @@ class SummaryMAG:
 		Summry mag quality from checkM result.
 
 		args:
-			input: STR
+			input: str
 				Input checkM result (list).
-			completeness: INT
+			completeness: int
 				Completeness cutoff to summary.
-			contamination: INT
+			contamination: int 
 				Contamination cutoff to summary.
 		"""
 
