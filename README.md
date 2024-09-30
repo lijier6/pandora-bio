@@ -21,7 +21,7 @@ Hope you find this tool useful.
 
 - `extract_seq`: extract matched/unmatched sequences with given `--seqid` or `--idlist`. `--seqid` can be multiple different ids seperated by " ", while `--idlist` should be provided a file contains `id` in a list/dataframe form, the first column represents the sequence id. When `--unmatch` is set, `stdout` will be all the sequences whose ids are not provided.
 
-- `fxlength`: read in the sequence file and `stdout` the length of each sequence in the form of <sequence `id`>TAB<sequence length>.
+- `fxlength`: read in the sequence file and `stdout` the length of each sequence in the form of <sequence `id`><TAB><sequence length>.
 
 - `avglength`: read in the sequence file and `stdout` the average length of all inputted sequences.
 
@@ -29,13 +29,13 @@ Hope you find this tool useful.
 
 - `abs2rel`: calculate relative values for absolute values and insert the relative value column into the table. Columns represent samples.
 
-## 2. 安装
+## 2. Installation
 `pandora` has been uploaded to `PyPI`, and can be installed using `pip`:
 ```
 $ pip install pandora-microbiome
 ```
 
-## 3. 使用
+## 3. Usage
 All subcommands in `pandora` can be called directly for different scenarios. View commands in `pandora`:
 ```
 $ pandora -h
@@ -72,7 +72,7 @@ optional arguments:
   -i FASTQ, --fastq FASTQ  input fastq file (.gz).
 ```
 
-#### 3.1.1 实例
+#### 3.1.1 Example
 ```
 $ pandora fq2fa -i test.fastq.gz > test.fasta
 $ pandora fq2fa -i test.fastq.gz | gzip > test.fasta.gz
@@ -93,7 +93,7 @@ optional arguments:
   -n NUM, --num NUM  number of sequences for Phred check (1000).
 ```
 
-#### 3.2.1 实例
+#### 3.2.1 Example
 ```
 $ pandora check_phred -i test.fastq.gz -n 10000
 ```
@@ -117,7 +117,7 @@ optional arguments:
   -q, --fastq           set if input is fastq.
 ```
 
-#### 3.3.1 实例
+#### 3.3.1 Example
 Extract sequences that match input `id`:
 ```
 $ pandora extract_seq -i Filt9 -s test.fa > extracted_Filt9.fa
@@ -145,7 +145,7 @@ optional arguments:
   -p, --plot         Set to plot a histogram for length.
 ```
 
-#### 3.4.1 实例
+#### 3.4.1 Example
 ```
 $ pandora fxlength -s test.fa --plot
 $ pandora fxlength -s test_1.fa.gz --plot
@@ -166,7 +166,7 @@ optional arguments:
   -p, --plot         set to plot a histogram for length
 ```
 
-#### 3.5.1 实例
+#### 3.5.1 Example
 ```
 $ pandora avglength -s test.fa --plot
 $ pandora avglength -s test_1.fq.gz --plot
@@ -191,7 +191,7 @@ optional arguments:
                         stat genomes with comtamination below this value (20).
 ```
 
-#### 3.6.1 实例
+#### 3.6.1 Example
 ```
 $ pandora summary_mag -i checkm_result.txt -cp 80 -ct 20
 ```
@@ -213,13 +213,13 @@ optional arguments:
                         output table, print if not set.
 ```
 
-#### 3.7.1 实例
+#### 3.7.1 Example
 ```
 $ pandora abs2rel -i abundance.table.xls -o abundance.table.relative.xls
 ```
 
-## 4. 贡献
+## 4. Contribution
 Feel free to contribute to this project. You can open an [issue](https://github.com/lijierr/pandora/issues) or submit a pull request.
 
-## 5. 联系
-Repository was developed by [Jie Li](https://github.com/lijierr), you can contact at jeveylijie@163.com.
+## 5. Contact
+Repository was developed by [Jie Li](https://github.com/lijierr).

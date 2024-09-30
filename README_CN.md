@@ -222,4 +222,4 @@ $ pandora abs2rel -i abundance.table.xls -o abundance.table.relative.xls
 欢迎为这个项目做出贡献。你可以开启一个问题（[issue](https://github.com/lijierr/pandora/issues)）或提交一个拉取请求（pull request）。
 
 ## 5. 联系
-这个仓库由Jie Li(https://github.com/lijierr)开发和维护，可以通过电子邮件jeveylijie@163.com联系。
+这个仓库由Jie Li(https://github.com/lijierr)开发和维护。
