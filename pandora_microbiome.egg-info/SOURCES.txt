@@ -2,6 +2,7 @@ README.md
 setup.py
 bin/pandora
 pandora/__init__.py
+pandora/abs2rel.py
 pandora/check_phred.py
 pandora/extract_seq.py
 pandora/fq2fa.py
