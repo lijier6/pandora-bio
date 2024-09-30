@@ -1,4 +1,4 @@
-# pandora：A collection of simple features that are frequently used on a daily basis.
+# pandora：A collection of some simple functions that are frequently used on a daily basis.
 
 [中文](./README_CN.md) | [English](./README.md)
 

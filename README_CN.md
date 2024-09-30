@@ -1,4 +1,4 @@
-# pandora：收集了日常使用频率较高的简单功能。
+# pandora：收集了一些日常使用频率较高的简单功能。
 
 [中文](./README_CN.md) | [English](./README.md)
 
