@@ -1,6 +1,6 @@
 # pandora：A collection of some simple functions that are frequently used on a daily basis.
 
-[中文](./README_CN.md) | [English](./README.md)
+[[English](./README.md)] | [[中文](./README_CN.md)]
 
 ## 1. Introduction
 In our daily use of computers, we usually just need to simply click the mouse to install and run APPs, as well as to achieve functions. For example, to write a document, we just need to double click the `Word` which will open a blank document, we can then write the content, after that, just click the mouse to save the document.
