@@ -1,18 +1,15 @@
 #coding:utf-8
 
-
 import sys
-
-from . import readseq
+from loguru import logger
 
 try:
-	from hellokit import system
+	from hellokit import system, sequence
 except ModuleNotFoundError:
-    sys.exit(f'<hellokit> required, try <pip3 install hellokit>.')
+    logger.error(f'<hellokit> required, try <pip3 install hellokit>.')
+	sys.exit()
 
-
-
-def fxlength(seq: str = None, plot: bool = False, avg_only: bool=False):
+def fxlength(seq: str = None, plot: bool = False, avg_only: bool=False) -> None:
 	'''
 	stdout length of each sequence,
 	plot a histgram if plot=True was set.
@@ -34,7 +31,7 @@ def fxlength(seq: str = None, plot: bool = False, avg_only: bool=False):
 	length['length'] = {}
 	if not avg_only: print(f'seqid\tlength\n')
 	handle = system.open_file(seq)
-	for name, seq, qual in readseq.readseq(handle):
+	for name, seq, qual in sequence.readseq(handle):
 		if not avg_only: print(f'{name}\t{len(seq)}\n')
 		length['length'][name] = len(seq)
 

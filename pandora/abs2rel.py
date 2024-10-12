@@ -17,14 +17,14 @@ except ModuleNotFoundError:
 
 
 
-def abs2rel(table: str = None, out_table: str = None):
+def abs2rel(table: str = None, out_table: str = None) -> None:
 	'''
 	Calculate relative abundance for each sample in the table
 	and insert it to the table.
 
 	args:
 	-----
-	
+
 	table: file
 		input table, column indicates sample, row indicates species, mags, OTU and so on.
 	out_table: str

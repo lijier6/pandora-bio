@@ -6,10 +6,10 @@ from pandora import version
 setup(
 	name='pandora-microbiome',
 	version=version.__version__,
-	description='pandora, a collection of functions.',
+	description='pandora, a collection of handy functions.',
 	url='https://github.com/lijierr/pandora',
-	author='Jie Li',
-	author_email='jeveylijie@163.com',
+	author=version.__author__,
+	author_email=version.__email__,
 
 	classifiers=[
 				'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',

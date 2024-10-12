@@ -1,18 +1,20 @@
 
 import sys
+from loguru import logger
 
 try:
 	import pandas
 except ModuleNotFoundError:
-    sys.exit(f'<pandas> required, try <pip install pandas>.')
-
+    logger.error(f'<pandas> required, try <pip install pandas>.')
+	sys.exit()
+	
 try:
 	from hellokit import system
 except ModuleNotFoundError:
-    sys.exit(f'<hellokit> required, try <pip install hellokit>.')
+    logger.error(f'<hellokit> required, try <pip install hellokit>.')
+	sys.exit()
 
-
-def summary_mag(input=None, completeness: int = 80, contamination: int == 20):
+def summary_mag(input=None, completeness: int = 80, contamination: int == 20) -> None:
 	'''
 	Summry mag quality from checkM result.
 
