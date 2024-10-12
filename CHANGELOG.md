@@ -1,5 +1,8 @@
 # pandora
 
+# version 0.2.1
+Rewrite Class to Closure Instance
+
 # version 0.2.0
 Adding commands `extract_seq`, `avglength`, `abs2rel`.
 
