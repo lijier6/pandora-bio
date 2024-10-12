@@ -72,7 +72,7 @@ optional arguments:
   -i FASTQ, --fastq FASTQ  input fastq file (.gz).
 ```
 
-#### 3.1.1 Example
+**`fq2fa` Example**
 ```
 $ pandora fq2fa -i test.fastq.gz > test.fasta
 $ pandora fq2fa -i test.fastq.gz | gzip > test.fasta.gz
@@ -93,7 +93,7 @@ optional arguments:
   -n NUM, --num NUM  number of sequences for Phred check (1000).
 ```
 
-#### 3.2.1 Example
+**`check_phred` Example**
 ```
 $ pandora check_phred -i test.fastq.gz -n 10000
 ```
@@ -104,20 +104,22 @@ Extract sequences based on the input sequence id. View details using `pandora ex
 $ pandora extract_seq -h
 ```
 ```
-usage: pandora extract_seq [-h] [-v] [-i SEQID | -l IDLIST] -s SEQ [-q]
+usage: pandora extract_seq [-h] [-v] [-i SEQID [SEQID ...] | -l SEQIDLIST] -s SEQUENCE [-fq] [-u]
 
 optional arguments:
   -h, --help            show this help message and exit
   -v, --version         print version information
-  -i SEQID, --seqid SEQID
+  -i SEQID [SEQID ...], --seqid SEQID [SEQID ...]
                         sequence id to extract, seperate by " ".
-  -l IDLIST, --idlist IDLIST
-                        id list file to extract.
-  -s SEQUENCE, --sequence SEQUENCE     input sequence file.
-  -q, --fastq           set if input is fastq.
+  -l SEQIDLIST, --seqidlist SEQIDLIST
+                        id list in file to extract.
+  -s SEQUENCE, --sequence SEQUENCE
+                        input sequence.
+  -fq, --fastq          set if input is fastq.
+  -u, --unmatch         set to extract unmatch sequences.
 ```
 
-#### 3.3.1 Example
+**`extract_seq` Example**
 Extract sequences that match input `id`:
 ```
 $ pandora extract_seq -i Filt9 -s test.fa > extracted_Filt9.fa
@@ -145,7 +147,7 @@ optional arguments:
   -p, --plot         Set to plot a histogram for length.
 ```
 
-#### 3.4.1 Example
+**`fxlength` Example**
 ```
 $ pandora fxlength -s test.fa --plot
 $ pandora fxlength -s test_1.fa.gz --plot
@@ -166,7 +168,7 @@ optional arguments:
   -p, --plot         set to plot a histogram for length
 ```
 
-#### 3.5.1 Example
+**`avglength` Example**
 ```
 $ pandora avglength -s test.fa --plot
 $ pandora avglength -s test_1.fq.gz --plot
@@ -191,7 +193,7 @@ optional arguments:
                         stat genomes with comtamination below this value (20).
 ```
 
-#### 3.6.1 Example
+**`summary_mag` Example**
 ```
 $ pandora summary_mag -i checkm_result.txt -cp 80 -ct 20
 ```
@@ -213,7 +215,7 @@ optional arguments:
                         output table, print if not set.
 ```
 
-#### 3.7.1 Example
+**`abs2rel` Example**
 ```
 $ pandora abs2rel -i abundance.table.xls -o abundance.table.relative.xls
 ```

@@ -13,22 +13,18 @@ except ModuleNotFoundError:
 	sys.exit()
 
 
-class FQ2FA:
-	def __init__(self, fq: str = None):
-		"""
-		convert fastq to fasta.
+def fq2fa(fq: str = None):
+	'''
+	convert fastq to fasta.
 
-		args:
-			fq: file
-				input fastq file (.gz).
-		"""
+	args:
+	-----
+	fq: file
+		input fastq file (.gz).
+	'''
 
-		selt.fq = fq
-
-		system.check_file(self.fq)
-
-	def fq2fa(self):
-		handle = system.open_file(self.fq)
-		for name, seq, qual in readseq.readseq(handle):
-			print(f'>{name}\n{seq}\n')
-		handle.close()
+	system.check_file(fq)
+	handle = system.open_file(fq)
+	for name, seq, qual in readseq.readseq(handle):
+		print(f'>{name}\n{seq}\n')
+	handle.close()
