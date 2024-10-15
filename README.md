@@ -3,15 +3,7 @@
 [[English](./README.md)] | [[中文](./README_CN.md)]
 
 ## 1. Introduction
-In our daily use of computers, we usually just need to simply click the mouse to install and run APPs, as well as to achieve functions. For example, to write a document, we just need to double click the `Word` which will open a blank document, we can then write the content, after that, just click the mouse to save the document.
-
-For sequencing data analysis, we usually need much more memory and CPU to excute biological computations, for example, the assembly of `~15Gb` metagenome data using `megahit` needs `50~80G` of memory and `10` CPU cores. Computers/laptops are certaily unable to satisfy such computational requirements, so HPC systems are needed in most cases to fulfil such requirements.
-
-There are currently two types of HPC: cloud-based and command-line based. For cloud computing, data analysis pipelines are deployed on HPC and packaged with an UI, allowing users to do analysis with mouse clicks. Such way is very convenient for users to operate. However, there are still many limitations in current cloud-computing. For example, analysis pipelines need to be adopted for different samples, which makes the analysis pipeline difficult to uniformly deploy and greatly increase the workload of cloud computing pipeline development and deployment. Command-line based HPC is more flexible in comparison, users can freely change the pipeline steps as needed. It only requires the user to master some bash commands.
-
-When analyzing data on HPC, we often encounter various problems, such as the need to change the data format. Because such functionality is not complex, there is no independent tool for them. The aim of `pandora` is to help users check their analysis results more quickly during the daily data analysis process and connect them to downstream analysis. `pandora` collected codes for many simple functions, which are convenient for users to call. After the installation, users can easily call the functions in the package, such as converting `fastq` to `fasta`, users just need to call the `fq2fa` command.
-
-Hope you find this tool useful.
+ `pandora` collected codes for many simple functions, which are convenient for users to call. After the installation, users can easily call the functions in the package, such as converting `fastq` to `fasta`, users just need to call the `fq2fa` command. Hope you find this tool useful.
 
 `pandora` currently contains the following commands:
 
