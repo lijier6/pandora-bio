@@ -177,7 +177,8 @@ def parse_args(args):
                             help='otput table, print if not set.'
     )
 
-    if len(args) == 1:
+    if len(args) == 1 or args[1] == '-h' or args[1] == '--help':
         sys.exit(p.print_help())
+
 
     return p.parse_args()

@@ -6,35 +6,34 @@ from loguru import logger
 try:
 	import numpy as np
 except ModuleNotFoundError:
-    logger.error(f'<numpy> required, try <pip install numpy>.')
+	logger.error('<numpy> required, try <pip install numpy>.')
 	sys.exit()
 
 try:
-	from hellokit import system, sequence
+	from ubox import usys, useq
 except ModuleNotFoundError:
-    logger.error(f'<hellokit> required, try <pip install hellokit>.')
+	logger.error('<hellokit> required, try <pip install hellokit>.')
 	sys.exit()
 
 
-def check_pred(fq: str = None, num: int =  1000) -> None:
+def check_phred(fq: str = None, num: int =  1000) -> None:
 
 	'''
 	Check phred value of input fastq.
 
-	args:
-	-----
-
-	fq: file
+	Parameter
+	---------
+	fq := str
 		input fastq file.
-	num : int
-		number of sequence for phred check.
+	num := int, default = 1000
+		number of sequence for phred check, [1000].
 	'''
 
-	system.check_file(fq)
+	usys.check_file(fq)
 	logger.info(f'Checking Phred value using {num} sequences.')
 	universal_quals, universal_mins, c = [], [], 0
-	fh = system.open_file(fq)
-	for name, seq, qual in sequence.readseq(fh):
+	fh = usys.open_file(fq)
+	for name, seq, qual in useq.readseq(fh):
 		if c < num:
 			qual = [ord(i) for i in qual]
 			universal_quals.extend(qual)

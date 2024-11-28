@@ -1,32 +1,30 @@
 
 import sys
 from loguru import logger
+from ubox import usys
 
 try:
 	import pandas
 except ModuleNotFoundError:
-    logger.error(f'<pandas> required, try <pip install pandas>.')
-	sys.exit()
-	
-try:
-	from hellokit import system
-except ModuleNotFoundError:
-    logger.error(f'<hellokit> required, try <pip install hellokit>.')
+	logger.error('<pandas> required, try <pip install pandas>.')
 	sys.exit()
 
-def summary_mag(input=None, completeness: int = 80, contamination: int == 20) -> None:
+def summary_mag(*table, completeness: int = 80, contamination: int == 20) -> None:
 	'''
 	Summry mag quality from checkM result.
 
-	args:
-	-----
+	Parameters
+	----------
+	*table : str, table1 [table2 table3...]
+		input checkM result table.
+	completeness = int, default = 80
+		completeness cutoff to summary [80].
+	contamination: int, default = 20
+		contamination cutoff to summary [20].
 
-	input: str
-		Input checkM result (list).
-	completeness: int
-		Completeness cutoff to summary.
-	contamination: int
-		Contamination cutoff to summary.
+	Results
+	-------
+	Print the statistical information of MAGs.
 	'''
 
 	def count_good_mag(df):
@@ -36,7 +34,7 @@ def summary_mag(input=None, completeness: int = 80, contamination: int == 20) ->
 				and contamination <= {contamination} in {df}.')
 		return read_df
 
-	def stat_mag(df):
+	def stat_mag(df) -> None:
 		complet, contam, step = 100, 0, 5
 		num = min([complet - completenss, contamination - contam])
 		for i in range(num):
@@ -46,13 +44,13 @@ def summary_mag(input=None, completeness: int = 80, contamination: int == 20) ->
 					and contamination <= {cont}.')
 
 	if len(input) == 1:
-		system.check_file(input)
+		usys.check_file(input)
 		df = count_good_mag(input)
 		stat_mag(df)
 	else:
 		all_df = []
 		for i in input:
-			system.check_file(i)
+			sysutil.check_file(i)
 			df_i = count_good_mag(i)
 			all_df.append(df_i)
 		all_df = pd.concat(all_df)

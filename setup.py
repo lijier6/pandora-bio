@@ -4,10 +4,10 @@ from setuptools import setup, find_packages
 from pandora import version
 
 setup(
-	name='pandora-microbiome',
+	name='pandora-bio',
 	version=version.__version__,
 	description='pandora, a collection of handy functions.',
-	url='https://github.com/lijierr/pandora',
+	url='https://github.com/lijier6/pandora-bio',
 	author=version.__author__,
 	author_email=version.__email__,
 
@@ -17,10 +17,10 @@ setup(
 				'Operating System :: Unix',
 	],
 	keywords='biology bioinformatics',
-	scripts=['bin/pandora'],
+	scripts=[version.__scripts__],
 	# packages = find_packages(),
-	packages=['pandora'],
+	packages=[version.__package__],
 	include_package_data=True,
 	python_requires='>=3.6',
-	install_requires=['hellokit>=0.1.0', ],
+	install_requires=['ubox>=0.1.0', ],
 )

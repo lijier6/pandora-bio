@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 
+'''
+This contains a number of methods and functions to calculate the iRep metric
+
+https://github.com/christophertbrown/iRep
+
+https://www.nature.com/articles/nbt.3704
+'''
+
+
 import sys
 import os
 
@@ -13,7 +22,7 @@ sys.path = [os.path.join(os.path.dirname(os.path.realpath(__file__)),'..')] + sy
 from pandora import version, parser
 
 __author__ = 'Jie Li'
-__email__  = 'jeveylijie@163.com'
+__email__  = 'lijier6@outlook.com'
 __version__ = version.__version__
 
 

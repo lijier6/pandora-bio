@@ -24,7 +24,7 @@
 ## 2. Installation
 `pandora` has been uploaded to `PyPI`, and can be installed using `pip`:
 ```
-$ pip install pandora-microbiome
+$ pip install pandora-bio
 ```
 
 ## 3. Usage
@@ -216,4 +216,4 @@ $ pandora abs2rel -i abundance.table.xls -o abundance.table.relative.xls
 Feel free to contribute to this project. You can open an [issue](https://github.com/lijierr/pandora/issues) or submit a pull request.
 
 ## 5. Contact
-Repository was developed by [Jie Li](https://github.com/lijierr).
+Repository was developed by [Jie Li](https://github.com/lijier6).
