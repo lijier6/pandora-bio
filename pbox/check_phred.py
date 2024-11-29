@@ -3,17 +3,9 @@
 import sys
 from loguru import logger
 
-try:
-	import numpy as np
-except ModuleNotFoundError:
-	logger.error('<numpy> required, try <pip install numpy>.')
-	sys.exit()
+import numpy as np
 
-try:
-	from ubox import usys, useq
-except ModuleNotFoundError:
-	logger.error('<hellokit> required, try <pip install hellokit>.')
-	sys.exit()
+from ubox import usys, useq
 
 
 def check_phred(fq: str = None, num: int =  1000) -> None:
@@ -21,8 +13,8 @@ def check_phred(fq: str = None, num: int =  1000) -> None:
 	'''
 	Check phred value of input fastq.
 
-	Parameter
-	---------
+	parameters
+	----------
 	fq := str
 		input fastq file.
 	num := int, default = 1000

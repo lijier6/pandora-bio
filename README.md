@@ -1,9 +1,9 @@
-# pandora：A collection of some simple functions that are frequently used on a daily basis.
+# pandora-bio：A collection of some simple functions that are frequently used on a daily basis.
 
 [[English](./README.md)] | [[中文](./README_CN.md)]
 
 ## 1. Introduction
- `pandora` collected codes for many simple functions, which are convenient for users to call. After the installation, users can easily call the functions in the package, such as converting `fastq` to `fasta`, users just need to call the `fq2fa` command. Hope you find this tool useful.
+ `pandora-bio` collected codes for many simple functions, which are convenient for users to call. After the installation, users can easily call the functions in the package, such as converting `fastq` to `fasta`, users just need to call the `fq2fa` command. Hope you find this tool useful.
 
 `pandora` currently contains the following commands:
 

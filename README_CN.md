@@ -1,11 +1,11 @@
-# pandora：收集了一些日常使用频率较高的简单功能。
+# pandora-bio：收集了一些日常使用频率较高的简单功能。
 
 [[English](./README.md)] | [[中文](./README_CN.md)]
 
 ## 1. 简介
-`pandora`中收录了很多小功能的代码，方便用户调用。用户在安装了这个工具包之后，即可直接使用包里包含的功能，例如将`fastq`文件转换为`fasta`文件，用户只需要调用`fq2fa`命令即可。希望这个小工具可以帮助到你。
+`pandora-bio`中收录了很多小功能的代码，方便用户调用。用户在安装了这个工具包之后，即可直接使用包里包含的功能，例如将`fastq`文件转换为`fasta`文件，用户只需要调用`fq2fa`命令即可。希望这个小工具可以帮助到你。
 
-`pandora`目前包含的命令有：
+`pandora-bio`目前包含的命令有：
 
 - `fq2fa`: 将`fastq`格式转换为`fasta`格式，`fasta`格式序列是`stdout`实时输出到屏幕。如果想要将`fasta`文件写入文件，只需用`>`重定向到一个文件即可。
 
@@ -24,7 +24,7 @@
 ## 2. 安装
 pandora已经打包上传到PyPI，可使用`pip`直接进行安装
 ```
-$ pip install pandora-microbiome
+$ pip install pandora-bio
 ```
 
 ## 3. 使用

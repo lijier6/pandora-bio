@@ -3,17 +3,9 @@
 import sys
 from loguru import logger
 
-try:
-	import pandas as pd
-except ModuleNotFoundError:
-	logger.error('<pandas> required, try <pip install pandas>.')
-	sys.exit()
+import pandas as pd
 
-try:
-	from ubox import usys, useq
-except ModuleNotFoundError:
-	logger.error('<hellokit> required, try <pip install hellokit>.')
-	sys.exit()
+from ubox import usys, useq
 
 
 def extract_seq(
@@ -26,8 +18,8 @@ def extract_seq(
 	'''
 	Extract sequences from fasta or fastq file.
 
-	Parameter
-	---------
+	parameters
+	----------
 	seqid := str, None
 		sequence id to extract.
 	idlist := str, None

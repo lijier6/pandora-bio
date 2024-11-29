@@ -1,19 +1,17 @@
 
 import sys
 from loguru import logger
+
+import pandas as pd
+
 from ubox import usys
 
-try:
-	import pandas
-except ModuleNotFoundError:
-	logger.error('<pandas> required, try <pip install pandas>.')
-	sys.exit()
 
 def summary_mag(*table, completeness: int = 80, contamination: int == 20) -> None:
 	'''
 	Summry mag quality from checkM result.
 
-	Parameters
+	parameters
 	----------
 	*table : str, table1 [table2 table3...]
 		input checkM result table.
@@ -22,7 +20,7 @@ def summary_mag(*table, completeness: int = 80, contamination: int == 20) -> Non
 	contamination: int, default = 20
 		contamination cutoff to summary [20].
 
-	Results
+	results
 	-------
 	Print the statistical information of MAGs.
 	'''

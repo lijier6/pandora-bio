@@ -1,10 +1,6 @@
 import sys
 
-try:
-    import argparse as ap
-except ModuleNotFoundError:
-    logger.error(f'<argparse> required, try <pip install argparse>.')
-    sys.exit()
+import argparse as ap
 
 from . import version
 

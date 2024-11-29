@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 from setuptools import setup, find_packages
-from pandora import version
+from pbox import version
 
 setup(
 	name='pandora-bio',
@@ -22,5 +22,5 @@ setup(
 	packages=[version.__package__],
 	include_package_data=True,
 	python_requires='>=3.6',
-	install_requires=['ubox>=0.1.0', ],
+	install_requires=['ubox>=0.1.0', 'pandas', 'numpy', 'argparse'],
 )

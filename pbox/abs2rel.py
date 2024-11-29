@@ -3,17 +3,9 @@
 import sys
 from loguru import logger
 
-try:
-	import pandas as pd
-except ModuleNotFoundError:
-	logger.error('<pandas> required, try <pip install pandas>.')
-	sys.exit()
+import pandas as pd
 
-try:
-	from ubox import usys
-except ModuleNotFoundError:
-	logger.error('<hellokit> required, try <pip install hellokit>.')
-	sys.exit()
+from ubox import usys
 
 
 def abs2rel(table: str = None, out_table: str = None) -> None:
@@ -21,8 +13,8 @@ def abs2rel(table: str = None, out_table: str = None) -> None:
 	Calculate relative abundance for each sample in the table
 	and insert it to the table.
 
-	Parameter
-	---------
+	parameters
+	----------
 	table := str
 		input table, column indicates sample, row indicates species, mags, OTU and so on.
 	out_table := str, default = None

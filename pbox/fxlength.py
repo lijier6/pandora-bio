@@ -3,11 +3,8 @@
 import sys
 from loguru import logger
 
-try:
-	from ubox import usys, useq
-except ModuleNotFoundError:
-	logger.error('<hellokit> required, try <pip3 install hellokit>.')
-	sys.exit()
+from ubox import usys, useq
+
 
 def fxlength(
 				seq_in: str = None,
@@ -18,7 +15,7 @@ def fxlength(
 	Stdout length of each sequence,
 	plot a histgram if plot=True was set.
 
-	Parameter
+	parameter
 	---------
 	seq_in := file
 		input sequence file, fastq or fasta.
