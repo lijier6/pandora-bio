@@ -1,11 +1,11 @@
-# pandora-bio：A collection of some simple functions that are frequently used on a daily basis.
+# pandora：A collection of some simple functions that are frequently used on a daily basis.
 
 [[English](./README.md)] | [[中文](./README_CN.md)]
 
 ## 1. Introduction
- `pandora-bio` collected codes for many simple functions, which are convenient for users to call. After the installation, users can easily call the functions in the package, such as converting `fastq` to `fasta`, users just need to call the `fq2fa` command. Hope you find this tool useful.
+ `pandora` collects many simple functions for users to call in pipeline. For example, to convert `fastq` to `fasta`, call the `fq2fa` command.
 
-`pandora` currently contains the following commands:
+`pandora` currently contains the following subcommands:
 
 - `fq2fa`: convert `fastq` to `fasta`，`fasta` sequences are `stdout` on the fly。If you want `fasta` sequences in a file，use `>` to simply redirect `stdout` to the file.
 
@@ -213,7 +213,7 @@ $ pandora abs2rel -i abundance.table.xls -o abundance.table.relative.xls
 ```
 
 ## 4. Contribution
-Feel free to contribute to this project. You can open an [issue](https://github.com/lijierr/pandora/issues) or submit a pull request.
+Feel free to contribute to this project. You can open an [issue](https://github.com/lijier6/pandora/issues) or submit a pull request.
 
 ## 5. Contact
 Repository was developed by [Jie Li](https://github.com/lijier6).

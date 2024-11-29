@@ -1,11 +1,11 @@
-# pandora-bio：收集了一些日常使用频率较高的简单功能。
+# pandora：收集了一些日常使用频率较高的简单功能。
 
 [[English](./README.md)] | [[中文](./README_CN.md)]
 
 ## 1. 简介
-`pandora-bio`中收录了很多小功能的代码，方便用户调用。用户在安装了这个工具包之后，即可直接使用包里包含的功能，例如将`fastq`文件转换为`fasta`文件，用户只需要调用`fq2fa`命令即可。希望这个小工具可以帮助到你。
+`pandora`中收录了很多小功能的代码，方便用户调用。用户在安装了这个工具包之后，即可直接使用包里包含的功能，例如将`fastq`文件转换为`fasta`文件，用户只需要调用`fq2fa`命令即可。希望这个小工具可以帮助到你。
 
-`pandora-bio`目前包含的命令有：
+`pandora`目前包含的命令有：
 
 - `fq2fa`: 将`fastq`格式转换为`fasta`格式，`fasta`格式序列是`stdout`实时输出到屏幕。如果想要将`fasta`文件写入文件，只需用`>`重定向到一个文件即可。
 
@@ -211,7 +211,7 @@ $ pandora abs2rel -i abundance.table.xls -o abundance.table.relative.xls
 ```
 
 ## 4. 贡献
-欢迎为这个项目做出贡献。你可以开启一个问题（[issue](https://github.com/lijierr/pandora/issues)）或提交一个拉取请求（pull request）。
+欢迎为这个项目做出贡献。你可以开启一个问题（[issue](https://github.com/lijier6/pandora/issues)）或提交一个拉取请求（pull request）。
 
 ## 5. 联系
 这个仓库由Jie Li(https://github.com/lijier6)开发和维护。
