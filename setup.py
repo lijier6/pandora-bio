@@ -22,5 +22,5 @@ setup(
 	packages=[version.__package__],
 	include_package_data=True,
 	python_requires='>=3.6',
-	install_requires=['ubox>=0.1.0', 'pandas', 'numpy', 'argparse'],
+	install_requires=['ubox-bio', 'pandas', 'numpy', 'argparse', 'loguru'],
 )
